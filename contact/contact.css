@@ -1,0 +1,383 @@
+* {
+    background-color: #2f2f32;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 60px; 
+}
+html, body {
+  overflow-y: scroll;         
+  scrollbar-width: none;      
+  -ms-overflow-style: none;   
+}
+
+body::-webkit-scrollbar {
+  display: none;              
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f2f32;
+    padding: 15px 20px;
+    height: 60px;
+    border-bottom: solid 3px rgb(0, 0, 0);
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    right: -660px;
+    width: 660px;
+    height: 50px;
+    background-color: #2f2f32;
+    padding: 0 30px;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 0 20px;
+}
+
+nav ul.show {
+    right: 0;
+}
+
+nav ul.show li {
+    opacity: 1;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    transition: color 0.3s;
+    font-family: "Roboto Mono", serif;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+.logo ul {
+    display: flex;
+    list-style: none;
+    color: #84ccef;
+    font-size: 25px;
+}
+
+.logo #name {
+    margin-left: 10px;
+    font-family: "Acme", serif;
+}
+
+.logo #GB {
+    color: white;
+    background-color: #84ccef;
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Acme", serif;
+}
+
+.menu-icon {
+    margin-left: auto;
+    cursor: pointer;
+    display: flex;
+    z-index: 9999;
+    align-items: center;
+}
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 30px;
+}
+
+button {
+  background-color: #2b2b2e;
+  color: #ffffff;
+  border: none;
+  padding: 20px 25px;
+  width: 400px;
+  height: 150px;
+  text-align: left;
+  border-radius: 25px;
+  font-size: 18px;
+  font-family: "Roboto Mono", monospace;
+  line-height: 1.4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+button p {
+  margin-top: 8px;
+  color: wheat;
+  font-size: 15px;
+  font-family: "Roboto Mono", monospace;
+  background-color: #2b2b2e;
+}
+
+button:hover {
+  background-color: #c6c0c0;  
+  color: black;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+button:hover p {
+  background-color: #c6c0c0; 
+  color: #2f2f32;
+}
+button strong{
+    background-color:#2b2b2e; ;
+}
+button:hover strong{
+    background-color: #c6c0c0 ;
+}
+button img{
+    background-color:#2b2b2e;
+}
+button:hover img{
+    background-color: #c6c0c0;
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+    font-family: "Croissant One", serif;
+}
+h3{
+   color: #868686;
+   font-size: 25px;
+}
+.txt{
+    text-align: center;
+    margin-top: 50px;
+   
+}
+.btn{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+button{
+    color: white;
+    text-align: left;
+}
+button p{
+    color: #868686;
+}
+@media (max-width: 991px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50px;
+    right: -200%;
+    width: 40%; 
+    max-width: 400px;
+    margin: 0 auto;
+    left: 80%;
+    transform: translateX(-50%);
+    background-color: #2f2f32;
+    transition: right 0.3s ease-in-out;
+    padding: 15px 0;
+    height: auto;
+    z-index: 9999;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  nav ul.show {
+    right: 0;
+  }
+
+
+  nav ul li {
+    padding: 10px 0;
+    width: 45%;
+    text-align: center;
+    opacity: 1; 
+    transition: none;
+  }
+
+  nav a {
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: flex;
+    z-index: 10000;
+    cursor: pointer;
+  }
+
+  .txt h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .txt h3 {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 15px;
+    margin-top: 30px;
+  }
+
+  .btn button {
+    flex: 1 1 calc(50% - 20px); 
+    max-width: 300px;
+    min-width: 140px;
+    padding: 12px;
+    height: auto;
+    font-size: 15px;
+  }
+
+  .btn button img {
+    width: 22px;
+  }
+
+  .btn button strong {
+    font-size: 16px;
+  }
+
+  .btn button p {
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .txt h1 {
+    font-size: 28px;
+  }
+
+  .txt h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .btn button {
+    flex: 1 1 calc(50% - 15px);
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn button img {
+    width: 20px;
+  }
+
+  .btn button strong {
+    font-size: 15px;
+  }
+
+  .btn button p {
+    font-size: 12px;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+   .txt h1 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .txt h3 {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 20px 10px;
+    gap: 25px;
+  }
+   .btn button {
+    flex: 1 1 100%;
+  }
+  button {
+    font-size: 14px;
+    width: 100%;
+    max-width: 260px;
+    padding: 12px;
+  }
+
+  button img {
+    width: 22px;
+  }
+
+  button strong {
+    font-size: 16px;
+  }
+
+  button p {
+    font-size: 13px;
+  }
+
+
+  nav ul {
+    padding: 15px 0;
+  }
+
+  nav ul li {
+    padding: 8px 0;
+  }
+
+  nav a {
+    font-size: 15px;
+    padding: 6px 0;
+  }
+}

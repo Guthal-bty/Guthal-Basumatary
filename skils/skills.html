@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="../HOME/GB.png">
+    <link  rel="stylesheet" href="skills.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Dancing+Script:wght@400..700&family=Matemasie&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Cookie&family=Dancing+Script:wght@400..700&family=Leckerli+One&family=Matemasie&family=Miniver&family=Mouse+Memoirs&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Cookie&family=Dancing+Script:wght@400..700&family=Jua&family=Leckerli+One&family=Matemasie&family=Miniver&family=Mouse+Memoirs&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Dancing+Script:wght@400..700&family=Matemasie&family=Mouse+Memoirs&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+    <title>Guthal Basumatary</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <ul>
+                <li id="GB">GB</li>
+                <li id="name">Guthal Basumatary</li>
+            </ul>
+        </div>
+        <nav>
+            <ul class="links show">
+                <li style="margin-top: 8px;"><a href="../INDEX.HTML">Home</a></li>
+                <li style="margin-top: 8px;"><a href="../ABOUT/about.html" >About</a></li>
+                <li style="margin-top: 8px;"><a href="../projects/project.html">Projects</a></li>
+                <li style="margin-top: 8px;"><a href="../skils/skills.html"  class="active">Skills</a></li>
+                <li style="margin-top: 8px;"><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon" >
+            <img src="../ABOUT/menu_24dp_84CCEF_FILL0_wght400_GRAD0_opsz24.png" alt="menu" height="45px">
+        </div>
+</header>
+<div class="skills-section">
+  <h1>Skills</h1>
+  <p class="intro">
+    Here are some of the technologies, tools, and frameworks I’ve worked with throughout my development journey.
+    Each one reflects my passion for building efficient, responsive, and user-friendly digital experiences.
+  </p>
+
+  <div class="skills-buttons">
+    <button class="skill-btn" onclick="toggleSkill('frontend')">Frontend Web Development</button>
+    <div class="subskills hidden" id="frontend">
+      <div class="card"> <img style=" vertical-align: bottom; margin-right: 3px;" width="25px" src="./img/html.png">HTML <P>★★★★☆ Experienced</P></div>
+      <div class="card"> <img style=" vertical-align: bottom; margin-right: 3px;" width="25px" src="./img/css.png">CSS<P>★★★☆☆ Intermediate</P></div>
+      <div class="card"> <img style=" vertical-align: bottom; margin-right: 3px;" width="25px" src="./img/java-script.png">JavaScript <P>★★★☆☆ Intermediate</P></div>
+      <div class="card"> <img style=" vertical-align: bottom; margin-right: 3px;" width="25px" src="./img/bootstrap.png">Bootstrap <P>★★★★☆ Experienced</P></div>
+      <div class="card"> <img style=" vertical-align: bottom; margin-right: 3px;" width="25px" src="./img/react.png">React <P>★★☆☆☆ <br>Basics</P></div>
+    </div>
+
+    <button class="skill-btn" onclick="toggleSkill('mobile')">Mobile App Development </button>
+    <div class="subskills hidden" id="mobile">
+      <div class="card" style="width: 400px;">Jetpack Compose with Kotlin<P>★★☆☆☆ <br>Basics</P></div>
+      <div class="card" style="width: 400px;">UI layouts using Composables<P>★★☆☆☆ <br>Basics</P></div>
+    </div>
+
+    <button class="skill-btn" onclick="toggleSkill('design')">Design & Prototyping</button>
+    <div class="subskills hidden" id="design">
+      <div class="card"><img style=" vertical-align: bottom; margin-right: 3px;" width="25px" src="./img/canva.png">Canva<P>★★★★☆ Experienced</P></div>
+      <div class="card"><img style=" vertical-align: middle; margin-right: 3px;" width="15px" src="./img/figma.png">Figma<P>★★★☆☆ Intermediate</P></div>
+    </div>
+
+    <button class="skill-btn" onclick="toggleSkill('tools')">Tools & Platforms</button>
+    <div class="subskills hidden" id="tools">
+      <div class="card"><img style=" vertical-align: bottom; margin-right: 3px;" width="25px" src="./img/github.png">Github<P>★★★☆☆ Intermediate</P></div>
+      <div class="card"><img style=" vertical-align: bottom;" width="25px" src="./img/vs.png"> VS Code<P>★★★★☆ Experienced</P></div>
+      <div class="card" style="width: 300px;"><img style=" vertical-align: bottom; margin-right: 3px;" width="25px" src="./img/android-std.png">Android Studio <P>★★★☆☆ <br>Intermediate</P></div>
+    </div>
+    
+    <button class="skill-btn" onclick="toggleSkill('soft')">Soft Skills</button>
+    <div class="subskills hidden" id="soft">
+      <div class="card" style="width: 300px;">Team Collaboration<p>★★★☆☆ <br>Intermediate</p></div>
+      <div class="card" style="width: 300px;">Problem-Solving <P>★★★★☆<br> Experienced</P></div>
+      <div class="card">Communication <p>★★★☆☆ Intermediate</p></div>
+      <div class="card" style="width: 300px;">Time Management<p>★★★☆☆<br>Intermediate</p></div>
+      <div class="card">Leadership<p>★★★☆☆ Intermediate</p></div>
+      
+    </div>
+
+    <button class="skill-btn" onclick="toggleSkill('pl')"> Other Programming Languages</button>
+    <div class="subskills hidden" id="pl">
+      <div class="card" ><img style=" vertical-align: bottom; margin-right: 3px;" width="25px" src="./img/P1.png">Python<P>★★☆☆☆ <br>Basics</P></div>
+      <div class="card" ><img style=" vertical-align: bottom; margin-right: 3px;" width="30px" src="./img/cc.png">C<P>★★☆☆☆ <br>Basics</P></div>
+      <div class="card" ><img style=" vertical-align: bottom; margin-right: 3px;" width="30px" src="./img/c+.png">C++<P>★★☆☆☆ <br>Basics</P></div>
+    </div>
+    
+    <button class="skill-btn" onclick="toggleSkill('sl')"> Spoken Languages</button>
+    <div class="subskills hidden" id="sl">
+      <div class="card" >Bodo <P>★★★★★<br>Native</P></div>
+      <div class="card" >Hindi<P>★★★★☆ <br>Fluent</P></div>
+      <div class="card" >English<P>★★★★☆ <br>Professional</P></div>
+      <div class="card" >Assamese<P>★★★☆☆ <br>Conversational</P></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script src="../ABOUT/script.js"></script>
+<script src="../skils/skills.js"></script>
+</body>
+</html>

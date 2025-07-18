@@ -1,0 +1,369 @@
+* {
+    background-color: #2f2f32;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 60px; 
+}
+html, body {
+  overflow-y: scroll;         
+  scrollbar-width: none;      
+  -ms-overflow-style: none;   
+}
+
+body::-webkit-scrollbar {
+  display: none;              
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f2f32;
+    padding: 15px 20px;
+    height: 60px;
+    border-bottom: solid 3px rgb(0, 0, 0);
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    right: -660px;
+    width: 660px;
+    height: 50px;
+    background-color: #2f2f32;
+    padding: 0 30px;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 0 20px;
+}
+
+nav ul.show {
+    right: 0;
+}
+
+nav ul.show li {
+    opacity: 1;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    transition: color 0.3s;
+    font-family: "Roboto Mono", serif;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+.logo ul {
+    display: flex;
+    list-style: none;
+    color: #84ccef;
+    font-size: 25px;
+}
+
+.logo #name {
+    margin-left: 10px;
+    font-family: "Acme", serif;
+}
+
+.logo #GB {
+    color: white;
+    background-color: #84ccef;
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Acme", serif;
+}
+
+.menu-icon {
+    margin-left: auto;
+    cursor: pointer;
+    display: flex;
+    z-index: 9999;
+    align-items: center;
+}
+.skills-section {
+  text-align: center;
+  color: white;
+  padding: 40px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.skills-section h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  color: #eee;
+  margin-bottom: 40px;
+}
+
+.skills-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.skill-btn {
+  width: 80%;
+  max-width: 800px;
+  background-color: #545454;
+  color: white;
+  font-size: 28px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  transition: background-color 0.3s ease;
+}
+
+.skill-btn.active {
+  background-color: #2f8e94;
+  color: white;
+}
+
+.skill-btn:hover {
+  background-color: #1e6f74;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.subskills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: #aaa;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 90%;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  background-color: #2f8e94;
+  padding: 25px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  width: 200px;
+}
+.card P{
+    color: black;
+    background-color: #2f8e94;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card img{
+    background-color: #2f8e94;
+}
+@media (max-width: 991px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50px;
+    right: -200%;
+    width: 40%; 
+    max-width: 400px;
+    margin: 0 auto;
+    left: 80%;
+    transform: translateX(-50%);
+    background-color: #2f2f32;
+    transition: right 0.3s ease-in-out;
+    padding: 15px 0;
+    height: auto;
+    z-index: 9999;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  nav ul.show {
+    right: 0;
+  }
+
+
+  nav ul li {
+    padding: 10px 0;
+    width: 40%;
+    text-align: center;
+    opacity: 1; 
+    transition: none;
+  }
+
+  nav a {
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: flex;
+    z-index: 10000;
+    cursor: pointer;
+  }
+
+  .skills-section h1 {
+    font-size: 42px;
+  }
+
+  .intro {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .skill-btn {
+    font-size: 22px;
+    padding: 12px;
+    max-width: 90%;
+  }
+
+  .subskills {
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .card {
+    width: calc(50% - 20px);
+    padding: 18px;
+    font-size: 17px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .skills-section h1 {
+    font-size: 36px;
+  }
+
+  .intro {
+    font-size: 18px;
+  }
+
+  .skill-btn {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .card {
+    width: calc(50% - 15px);
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .skills-section {
+    padding: 30px 10px;
+    grid-area: 20px;
+    
+  }
+
+  .skills-section h1 {
+    font-size: 30px;
+  }
+
+  .intro {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .skill-btn {
+    font-size: 18px;
+    padding: 8px;
+ 
+  }
+
+  .subskills {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .card {
+    width: calc(50% - 10px);
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+  nav ul {
+    padding: 15px 0;
+  }
+
+  nav ul li {
+    padding: 8px 0;
+  }
+
+  nav a {
+    font-size: 15px;
+    padding: 6px 0;
+  }
+}
+
