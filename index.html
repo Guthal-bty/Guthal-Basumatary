@@ -416,9 +416,7 @@ leg(lg[0]);arm(af,hf);ctx.restore()};
 draw('rgba(255,178,120,.55)',-1.6*k,.5*k);draw('#040306',0,0)}
 
 function frame(){
-tm=performance.now()/1000;const prev=p;
-p=calm?target:lerp(p,target,.09);if(Math.abs(target-p)<0.0005)p=target;
-speed=lerp(speed,Math.abs(p-prev),.2);phase+=Math.abs(p-prev)*LEN()*.0628/sc;
+tm=performance.now()/1000;const prev=p;p=calm?target:lerp(p,target,.09);speed=lerp(speed,Math.abs(p-prev),.2);phase+=Math.abs(p-prev)*LEN()*.0628/sc;
 const d=Math.min(1,p),X=p*(LEN()-40*sc),sx=SX(),ty=TY(),hX=h(X);
 const gy=x=>ty-(h(x-sx+X)-hX);
 /* dusk sky that deepens as we climb */
