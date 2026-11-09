@@ -433,7 +433,7 @@ ctx.beginPath();for(let x=0;x<=W+4;x+=4){const y=gy(x);x?ctx.lineTo(x,y):ctx.mov
 flag(sx,gy,X);man(sx,gy,p>.985);
 ctx.fillStyle=vig;ctx.fillRect(0,0,W,H);
 if(grain){ctx.save();ctx.globalAlpha=.05;ctx.globalCompositeOperation='overlay';ctx.translate(Math.random()*128|0,Math.random()*128|0);ctx.fillStyle=grain;ctx.fillRect(-128,-128,W+256,H+256);ctx.restore()}
-altv.textContent=Math.round(1200+p*3600).toLocaleString('en-US')+' m';altd.style.bottom=`calc(${p*100}% - ${p*10}px)`;
+altv.textContent=(p >= 0.999 ? 4800 : Math.round(1200+p*3600)).toLocaleString('en-US')+' m';;altd.style.bottom=`calc(${p*100}% - ${p*10}px)`;
 requestAnimationFrame(frame)}
 setup();prog();p=target;requestAnimationFrame(frame);
 })();
