@@ -150,6 +150,9 @@ nav{padding:10px 4vw}
 #mb.x i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 /* ===== Mobile sizing (sirf phone ke liye; laptop ka look same hai) ===== */
 @media(max-width:760px){
+#contact h2 {
+    transform: translateY(-60px);
+}
 nav{padding:9px 4vw}
 .logo{font-size:1.1rem}
 #mb{width:34px;height:34px;gap:5px}
@@ -320,29 +323,7 @@ function autoSlide(sel,ms){
     else s.scrollBy({left:step,behavior:'smooth'});
   },ms);
 }
-autoSlide('#mo',2800);
-/* Projects: non-stop fast marquee */
-(function(){
-  const s=$('#pr'),sec=$('#projects'),n=PROJ.length;
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  const SPEED=120; /* px per second: bada number = aur tez (jaise 200) */
-  s.innerHTML+=s.innerHTML;            /* cards do baar, taaki loop beech me na tute */
-  s.style.scrollSnapType='none';
-  let pos=0,last=0,paused=false,vis=false,t,period=1;
-  const measure=()=>{period=s.children[n].offsetLeft-s.children[0].offsetLeft||1};
-  measure();addEventListener('resize',measure);
-  new IntersectionObserver(es=>{vis=es[0].isIntersecting}).observe(s);
-  const stop=()=>{paused=true;clearTimeout(t)};
-  const go=()=>{clearTimeout(t);t=setTimeout(()=>{pos=s.scrollLeft;paused=false},1500)};
-  ['pointerenter','touchstart','focusin'].forEach(e=>sec.addEventListener(e,stop,{passive:true}));
-  ['pointerleave','touchend','focusout'].forEach(e=>sec.addEventListener(e,go,{passive:true}));
-  function tick(ts){
-    const dt=Math.min(.05,(ts-last)/1000||0);last=ts;
-    if(!paused&&vis&&!document.hidden){pos+=SPEED*dt;if(pos>=period)pos-=period;s.scrollLeft=pos}
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-})();
+autoSlide('#pr',3000);autoSlide('#mo',2800);
 const mb=$('#mb'),mn=$('#menu');
 const tog=o=>{mn.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.classList.toggle('x',o)};
 mb.onclick=()=>tog(!mn.classList.contains('open'));
