@@ -141,6 +141,72 @@ body.loading{overflow:hidden}
 .car{position:relative}
 .mom{flex:0 0 clamp(150px,14vw,220px)}
 .gh{margin:10px 4vw 0;font-size:1.3rem}
+nav{padding:10px 4vw}
+.logo{font-size:1.15rem}
+#cur{font-size:.8rem}
+#mb{width:36px;height:36px;gap:5px}
+#mb i{width:22px;height:2px}
+#mb.x i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+#mb.x i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* ===== Mobile sizing (sirf phone ke liye; laptop ka look same hai) ===== */
+@media(max-width:760px){
+nav{padding:9px 4vw}
+.logo{font-size:1.1rem}
+#mb{width:34px;height:34px;gap:5px}
+#mb i{width:20px;height:2px}
+#mb.x i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+#mb.x i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.pn{padding:68px 22px 22px}
+.pn a{font-size:1.05rem;padding:8px 0}
+#hero{padding-top:68px;gap:12px}
+.pill{font-size:.66rem;padding:1px 8px;margin-right:5px;margin-bottom:5px}
+h1{font-size:clamp(2.1rem,11vw,2.9rem);margin:12px 0 10px}
+.lead{font-size:.92rem}
+.btns{margin-top:16px;gap:8px}
+.b{padding:9px 18px;font-size:.86rem}
+.row{padding:22px 0 6px}
+.row h2{font-size:1.1rem}
+.sc{padding:18px 4vw 26px;gap:10px}
+.card{padding:12px}
+.card h3{font-size:1rem}
+.card small{font-size:.72rem}
+.card .big{font-size:4.5rem}
+.about{padding:12px 4vw 26px;gap:18px}
+.about p{font-size:.92rem}
+.skh{font-size:1.05rem}
+.skills{gap:7px}
+.skills span{padding:6px 12px;font-size:.78rem}
+.stats{gap:8px}
+.stats div,.tl li{padding:12px 14px}
+.stats b{font-size:1.1rem}
+.stats span,.tl time{font-size:.8rem}
+.tl{padding:16px 4vw 26px;gap:10px}
+.tl h3{font-size:.98rem}
+.tl p{font-size:.85rem}
+.hobs{padding:14px 4vw 26px;gap:8px;grid-template-columns:repeat(2,1fr)}
+.hobs div{padding:12px}
+.hobs h3{font-size:.95rem}
+.hobs p{font-size:.78rem}
+.quote{font-size:.95rem;padding-top:12px}
+.mom span{padding:20px 9px 9px;font-size:.78rem}
+.gal{padding:16px 4vw 26px;gap:7px;grid-auto-rows:105px}
+#contact{padding:50px 4vw}
+#contact h2{font-size:1.65rem}
+#contact p{font-size:.9rem}
+.cl{margin-top:28px!important}
+.socs{gap:9px}
+.soc{width:40px;height:40px}
+.soc svg{width:17px;height:17px}
+.cr{font-size:.75rem}
+.mb{padding:16px 18px 20px}
+.mb h3{font-size:1.25rem}
+.mh{height:140px}
+#summit{font-size:.66rem;padding:6px 13px;bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+#alt{font-size:.58rem;gap:5px}
+#alt i{height:min(170px,30vh)}
+.ln{font-size:1.9rem}
+.lw{font-size:.7rem}
+}
 </style>
 </head>
 <body class="loading">
@@ -161,7 +227,7 @@ body.loading{overflow:hidden}
 <section id="top"><div id="hero">
 <div class="hl"><span class="pill">Software Developer</span><span class="pill">B.Tech in CSE</span><span class="pill">GET at _VOIS</span>
 <h1>Guthal<br>Basumatary</h1>
-<p class="lead">Software Developer | Constantly learning, growing, and exploring new horizons. . Currently working at  _VOIS.</p>
+<p class="lead">Software Developer | Constantly learning, growing, and exploring new horizons. Currently working at  _VOIS.</p>
 <div class="btns"><a class="b b1" href="./resume/Guthal_resume.pdf">▼ Resume</a><a class="b b2" href="#about">About me</a></div></div>
 <div class="hr"><img id="me" src="./photos/main.jpeg" alt="Portrait of Aarav on a hilltop with mountains behind him" width="760" height="877"></div>
 </div></section>
@@ -176,7 +242,7 @@ I believe in continuous growth, creative thinking, staying curious, and building
 <section class="row" id="hobbies"><h2>Hobbies</h2><div class="hobs"><div><h3>Travelling</h3><p>exploring new places and enjoying moments with friends</p></div><div><h3>Trekking</h3><p>Chasing viewpoints and summits </p></div><div><h3>Photography</h3><p>Capturing light, landscapes and people.</p></div><div><h3>Football</h3><p>Weekend matches with friends.</p></div><div><h3>Volleyball</h3><p>Friendly night volleyball matches.</p></div><div><h3>Guitar</h3><p>Enjoy playing guitar and singing bodo music in my free time.</p></div></div></section>
 <section class="row" id="memories"><h2>Reflections &amp; memories</h2><p class="quote">“The mountain doesn’t care how fast you climb. It only asks that you keep going.”</p><div class="car"><button class="arr l" aria-label="Scroll left">‹</button><div class="sc" id="mo"></div><button class="arr r" aria-label="Scroll right">›</button></div></section>
 <section class="row" id="gallery"><h2>Gallery</h2><div class="gal" id="gl"></div></section>
-<section id="contact"><h2>You made it to the summit.</h2><p>Let’s connect and explore together.</p><div class="btns"><a class="b b3" href="https://in.linkedin.com/in/guthal-basumatary-a2515a250">Connect</a></div><p class="cl">Connect with me</p><div class="socs"><a class="soc" href="https://in.linkedin.com/in/guthal-basumatary-a2515a250" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.063 2.063 0 1 1 0-4.128 2.063 2.063 0 0 1 0 4.128zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg></a><a class="soc" href="https://www.facebook.com/guthal.basumatary.128326" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a class="soc" href="https://www.instagram.com/basumtry____?dlrf=amw2Nm9ycG8ybXdi"  rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3"/></svg></a><a class="soc" href="https://github.com/Guthal-bty"  rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.921.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a><a class="soc" href="https://x.com/guthalbty4"  rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a class="soc" id="mailLink" href="mailto:guthalbty4@gmail.com?subject=Hello%20Guthal" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6.5L21 7"/></svg></a></div><p class="cr">© 2026 Guthal Basumatary</p></section>
+<section id="contact"><h2>You made it to the summit.<br><br></h2><p>Let’s connect and explore together.</p><div class="btns"><a class="b b3" href="https://in.linkedin.com/in/guthal-basumatary-a2515a250">Connect</a></div><p class="cl">Connect with me</p><div class="socs"><a class="soc" href="https://in.linkedin.com/in/guthal-basumatary-a2515a250" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.063 2.063 0 1 1 0-4.128 2.063 2.063 0 0 1 0 4.128zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg></a><a class="soc" href="https://www.facebook.com/guthal.basumatary.128326" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a class="soc" href="https://www.instagram.com/basumtry____?dlrf=amw2Nm9ycG8ybXdi" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3"/></svg></a><a class="soc" href="https://github.com/Guthal-bty" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.921.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a><a class="soc" href="https://x.com/guthalbty4" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a class="soc" id="mailLink" href="mailto:guthalbty4@gmail.com?subject=Hello%20Guthal" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6.5L21 7"/></svg></a></div><p class="cr">© 2026 Guthal Basumatary</p></section>
 </main>
 
 <dialog id="md"><div class="mh" id="mh"><button class="x" aria-label="Close">✕</button></div><div class="mb" id="mbody"></div></dialog>
@@ -236,6 +302,47 @@ c.style.setProperty('--ry',((e.clientX-r.left)/r.width-.5)*14+'deg');c.style.set
 $('#pr').addEventListener('pointerout',e=>{const c=e.target.closest('.card');if(c){c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')}});
 /* side arrows: har arrow apni hi row ko scroll karta hai (Projects aur Memories) */
 document.querySelectorAll('.arr').forEach(b=>b.onclick=()=>{const s=b.parentElement.querySelector('.sc');s.scrollBy({left:(b.classList.contains('l')?-1:1)*s.clientWidth*.8,behavior:'smooth'})});
+/* auto-slide: Projects aur Memories ke cards apne aap right me slide hote hain */
+function autoSlide(sel,ms){
+  const s=$(sel);if(!s||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  let paused=false,vis=false,resume;
+  new IntersectionObserver(es=>{vis=es[0].isIntersecting}).observe(s);
+  const stop=()=>{paused=true;clearTimeout(resume)};
+  const go=()=>{clearTimeout(resume);resume=setTimeout(()=>{paused=false},2500)};
+  ['pointerenter','pointerdown','touchstart','focusin','wheel'].forEach(n=>s.addEventListener(n,stop,{passive:true}));
+  ['pointerleave','touchend','focusout'].forEach(n=>s.addEventListener(n,go,{passive:true}));
+  setInterval(()=>{
+    if(paused||!vis||document.hidden)return;
+    const max=s.scrollWidth-s.clientWidth;if(max<=4)return;
+    const first=s.firstElementChild;if(!first)return;
+    const step=first.getBoundingClientRect().width+14;
+    if(s.scrollLeft>=max-4)s.scrollTo({left:0,behavior:'smooth'});
+    else s.scrollBy({left:step,behavior:'smooth'});
+  },ms);
+}
+autoSlide('#mo',2800);
+/* Projects: non-stop fast marquee */
+(function(){
+  const s=$('#pr'),sec=$('#projects'),n=PROJ.length;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const SPEED=120; /* px per second: bada number = aur tez (jaise 200) */
+  s.innerHTML+=s.innerHTML;            /* cards do baar, taaki loop beech me na tute */
+  s.style.scrollSnapType='none';
+  let pos=0,last=0,paused=false,vis=false,t,period=1;
+  const measure=()=>{period=s.children[n].offsetLeft-s.children[0].offsetLeft||1};
+  measure();addEventListener('resize',measure);
+  new IntersectionObserver(es=>{vis=es[0].isIntersecting}).observe(s);
+  const stop=()=>{paused=true;clearTimeout(t)};
+  const go=()=>{clearTimeout(t);t=setTimeout(()=>{pos=s.scrollLeft;paused=false},1500)};
+  ['pointerenter','touchstart','focusin'].forEach(e=>sec.addEventListener(e,stop,{passive:true}));
+  ['pointerleave','touchend','focusout'].forEach(e=>sec.addEventListener(e,go,{passive:true}));
+  function tick(ts){
+    const dt=Math.min(.05,(ts-last)/1000||0);last=ts;
+    if(!paused&&vis&&!document.hidden){pos+=SPEED*dt;if(pos>=period)pos-=period;s.scrollLeft=pos}
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
 const mb=$('#mb'),mn=$('#menu');
 const tog=o=>{mn.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.classList.toggle('x',o)};
 mb.onclick=()=>tog(!mn.classList.contains('open'));
